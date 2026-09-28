@@ -67,3 +67,14 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# 本地编译生成的程序
+task1/first_frame
+task1/task1
+
+# 官方提供的输入视频，本地保留即可
+task1/data/*.webm
+
+# 旧版本遗留的过程图
+task1/output/first_frame.png
+task1/output/rotated_rects_all.png

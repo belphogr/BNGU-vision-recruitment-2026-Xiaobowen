@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "编译并运行任务1",
+            "type": "shell",
+            "command": "g++ -std=c++17 src/main.cpp -o first_frame $(pkg-config --cflags --libs opencv4) && ./first_frame",
+            "options": {
+                "cwd": "${workspaceFolder}/task1"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
