@@ -75,6 +75,7 @@ task2/camera_test
 task2/capture_calibration
 task2/calibrate_camera
 task2/apriltag_pose
+task2/src/camera_test.cpp
 
 # 官方提供的输入视频，本地保留即可
 task1/data/*.webm
