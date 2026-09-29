@@ -49,6 +49,28 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "运行任务3串口发送测试",
+            "type": "shell",
+            "command": "g++ -std=c++17 src/serial_sender.cpp -o serial_sender && ./serial_sender",
+            "options": {
+                "cwd": "${workspaceFolder}/task3"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "运行任务3实时视觉串口发送",
+            "type": "shell",
+            "command": "g++ -std=c++17 src/vision_serial_sender.cpp -o vision_serial_sender $(pkg-config --cflags --libs opencv4) $(pkg-config --cflags --libs apriltag) -lapriltag-utils && ./vision_serial_sender",
+            "options": {
+                "cwd": "${workspaceFolder}/task3"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
