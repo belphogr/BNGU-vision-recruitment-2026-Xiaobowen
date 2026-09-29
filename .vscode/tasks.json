@@ -8,9 +8,43 @@
             "options": {
                 "cwd": "${workspaceFolder}/task1"
             },
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "拍摄任务2棋盘格标定照片",
+            "type": "shell",
+            "command": "g++ -std=c++17 src/capture_calibration.cpp -o capture_calibration $(pkg-config --cflags --libs opencv4) && ./capture_calibration",
+            "options": {
+                "cwd": "${workspaceFolder}/task2"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "运行任务2相机标定",
+            "type": "shell",
+            "command": "g++ -std=c++17 src/calibrate_camera.cpp -o calibrate_camera $(pkg-config --cflags --libs opencv4) && ./calibrate_camera",
+            "options": {
+                "cwd": "${workspaceFolder}/task2"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "运行任务2 AprilTag 程序",
+            "type": "shell",
+            "command": "g++ -std=c++17 src/apriltag_pose.cpp -o apriltag_pose $(pkg-config --cflags --libs opencv4) $(pkg-config --cflags --libs apriltag) -lapriltag-utils && ./apriltag_pose",
+            "options": {
+                "cwd": "${workspaceFolder}/task2"
             },
             "problemMatcher": [
                 "$gcc"

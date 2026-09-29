@@ -71,6 +71,10 @@ Testing/
 # 本地编译生成的程序
 task1/first_frame
 task1/task1
+task2/camera_test
+task2/capture_calibration
+task2/calibrate_camera
+task2/apriltag_pose
 
 # 官方提供的输入视频，本地保留即可
 task1/data/*.webm

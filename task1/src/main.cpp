@@ -23,7 +23,7 @@ int main(){
 
  double fps = 14.4;//根据原视频算得的帧率
  while (capture.read(frame)) {
-   //每次自动读取下一帧，frame更新
+   //每次自动读取下一帧，装进frame，不断更新
     frameIndex++;
     bool saveDebug = (frameIndex == 1); //只给第一帧保存过程图
     auto startTime = std::chrono::steady_clock::now();//记下当前时刻，作为这一帧开始处理的时间
